@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    
+    int number;
+    
+    IBOutlet UILabel *numberLabel;
+}
+
+-(IBAction)plus;
+-(IBAction)minus;
+-(IBAction)clear;
+
 
 @end

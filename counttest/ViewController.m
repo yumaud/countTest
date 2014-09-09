@@ -18,12 +18,38 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    number = 0;
+    
+    [self hyouji];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(IBAction)plus{
+    number ++;
+    [self hyouji];
+}
+
+-(IBAction)minus{
+    number --;
+    [self hyouji];
+}
+
+-(IBAction)clear{
+    number = 0;
+    [self hyouji];
+}
+
+-(void)hyouji{
+    numberLabel.text = [NSString stringWithFormat:@"%d",number];
 }
 
 @end
